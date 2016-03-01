@@ -9,7 +9,6 @@
 - Set Jira `pointsField` in config.js - if you don't know this name you can often find it by attempting to search in the gui
 - Set Jira `shirtField` in config.js - if you don't know this name you can often find it by attempting to search in the gui
 - Set Jira credentials in `config.js`
-
 - Optionally tweak the points for sizes
 
 ## Run
