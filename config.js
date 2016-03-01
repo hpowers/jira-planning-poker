@@ -5,8 +5,10 @@ try {
   var credentials = require('./credentials')
 } catch(er){}
 
-config.projectPrefix = 'IN';
 config.apiBaseUrl = 'https://socialtables.atlassian.net';
+config.projectPrefix = 'AP';
+config.pointsField = 'customfield_10005';
+config.shirtField = 'customfield_10600';
 
 config.credentials = credentials || {
   // note Jira username is usually not email address

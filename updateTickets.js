@@ -6,8 +6,12 @@ function updateJira(key,size){
 
   var points = config.points[size];
 
+  var fields = {};
+  fields[config.pointsField] = points;
+  fields[config.shirtField] = {value:size};
+
   var callApi = {
-   url: config.apiBaseUrl'/rest/api/2/issue/'+key,
+   url: config.apiBaseUrl+'/rest/api/2/issue/'+key,
    method: 'PUT',
    auth: {
      user: config.credentials.username,
@@ -15,14 +19,7 @@ function updateJira(key,size){
      sendImmediately: true
    },
    json: {
-     fields: {
-      // points
-      customfield_10005: points,
-      // size
-      customfield_10600: {
-        value: size
-      }
-     }
+     fields: fields
    }
   };
 
