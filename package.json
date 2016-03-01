@@ -1,0 +1,16 @@
+{
+  "name": "jira_shirt_converter",
+  "version": "1.0.0",
+  "description": "Export and imports tickets from Jira for planningpoker.com",
+  "main": "plan_poker.sh",
+  "dependencies": {
+    "lodash": "^4.5.1",
+    "request": "^2.69.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
