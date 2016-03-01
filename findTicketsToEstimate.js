@@ -37,7 +37,7 @@ function pokerInput(issues){
     html.push(issue.key+' - '+issue.name);
   }
   var htmlString = html.join('<br>');
-  fs.writeFile('pokerInput.html', htmlString);
+  fs.writeFile('out/pokerInput.html', htmlString);
 }
 
 // build a file we can open in chrome and use the links to review issues
@@ -50,7 +50,7 @@ function linkSheet(issues){
     html.push('<a href="https://socialtables.atlassian.net/browse/'+issue.key+'#'+rand+'" target="_blank">'+issue.key+' - '+issue.name+'</a>');
   }
   var htmlString = html.join('<br><br>');
-  fs.writeFile('linkSheet.html', htmlString);
+  fs.writeFile('out/linkSheet.html', htmlString);
 }
 
 // process the results of API call

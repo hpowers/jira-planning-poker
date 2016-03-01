@@ -33,8 +33,6 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
-linkSheet.html
-pokerInput.html
 debug.js
 todo
 credentials.js

@@ -1,9 +1,17 @@
-var credentials = require('./credentials'),
-         config = {};
+var config = {};
+
+try {
+  // optionally store your credentials in a seperate file
+  var credentials = require('./credentials')
+} catch(er){}
 
 config.projectPrefix = 'IN';
 
-config.credentials = credentials;
+config.credentials = credentials || {
+  // note Jira username is usually not email address
+  username: 'Jira username',
+  passwprd: 'Jira password'
+};
 
 config.points = {
   'xxs':0,

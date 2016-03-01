@@ -37,7 +37,7 @@ function updateJira(key,size){
 }
 
 // process the results
-fs.readFile('PastePokerOutHere', 'utf8', function (err,data) {
+fs.readFile('pasteResults/here.txt', 'utf8', function (err,data) {
 
   var line, size, id;
   // break into array of lines

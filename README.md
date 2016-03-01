@@ -3,7 +3,7 @@
 ## Setup Once
 
 - `npm i` for dependencies
-- Set Jira credentials in `credentials.js`
+- Set Jira credentials in `config.js`
 - Set project prefix in `config.js`
 
 ## Run
