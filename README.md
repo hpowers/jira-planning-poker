@@ -6,6 +6,7 @@
 - Set `apiBaseUrl` in `config.js`
 - Set Jira credentials in `config.js`
 - Set project prefix in `config.js`
+- Optionally tweak the points for sizes
 
 ## Run
 
