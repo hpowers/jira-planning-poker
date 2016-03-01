@@ -9,5 +9,5 @@
 ## Run
 
 - Run `./plan_poker.sh` which will open a page with links to your tickets, planningpoker.com and a list of tickets. copy those tickets to your clipboard and paste them into planning poker.
-- Paste the ouput of planningpoker into `PastePokerOutHere`
+- Paste the ouput of planningpoker into `pasteResults/here.txt`
 - Run `updateTickets.js`
