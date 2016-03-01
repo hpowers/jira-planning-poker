@@ -6,6 +6,7 @@ try {
 } catch(er){}
 
 config.projectPrefix = 'IN';
+config.apiBaseUrl = 'https://socialtables.atlassian.net';
 
 config.credentials = credentials || {
   // note Jira username is usually not email address

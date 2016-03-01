@@ -3,6 +3,7 @@
 ## Setup Once
 
 - `npm i` for dependencies
+- Set `apiBaseUrl` in `config.js`
 - Set Jira credentials in `config.js`
 - Set project prefix in `config.js`
 

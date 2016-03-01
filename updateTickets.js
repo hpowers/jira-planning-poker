@@ -7,7 +7,7 @@ function updateJira(key,size){
   var points = config.points[size];
 
   var callApi = {
-   url: 'https://socialtables.atlassian.net/rest/api/2/issue/'+key,
+   url: config.apiBaseUrl'/rest/api/2/issue/'+key,
    method: 'PUT',
    auth: {
      user: config.credentials.username,

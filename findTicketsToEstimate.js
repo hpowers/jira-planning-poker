@@ -5,7 +5,7 @@ var request = require('request'),
 
 // setup the Jira API call
 var callApi = {
- url: 'https://socialtables.atlassian.net/rest/api/2/search',
+ url: config.apiBaseUrl+'/rest/api/2/search',
  auth: {
    user: config.credentials.username,
    pass: config.credentials.password,
@@ -16,24 +16,11 @@ var callApi = {
  }
 };
 
-// stolen from http://stackoverflow.com/questions/1787322/htmlspecialchars-equivalent-in-javascript
-// function escapeHtml(text) {
-//   var map = {
-//     '&': '&amp;',
-//     '<': '&lt;',
-//     '>': '&gt;',
-//     '"': '&quot;',
-//     "'": '&#039;'
-//   };
-//   return text.replace(/[&<>"']/g, function(m) { return map[m]; });
-// }
-
 // build a file that we can open in chrome and copy and paste into planningpoker.com
 function pokerInput(issues){
   var html = [];
   for (index in issues){
     var issue = issues[index];
-    // html.push(escapeHtml('<a href=\'https://socialtables.atlassian.net/browse/'+issue.key+'\'>'+issue.key+' - '+issue.name+'</a>'));
     html.push(issue.key+' - '+issue.name);
   }
   var htmlString = html.join('<br>');
@@ -47,7 +34,7 @@ function linkSheet(issues){
 
   for (index in issues){
     var issue = issues[index];
-    html.push('<a href="https://socialtables.atlassian.net/browse/'+issue.key+'#'+rand+'" target="_blank">'+issue.key+' - '+issue.name+'</a>');
+    html.push('<a href="'+config.apiBaseUrl+'/browse/'+issue.key+'#'+rand+'" target="_blank">'+issue.key+' - '+issue.name+'</a>');
   }
   var htmlString = html.join('<br><br>');
   fs.writeFile('out/linkSheet.html', htmlString);
@@ -73,7 +60,6 @@ function processApi(error, response, body) {
 
     // sort the keys so issues are in order created
     issues = _.sortBy(issues, ['key']);
-    // console.log(issues)
 
     // build our output
     pokerInput(issues);
